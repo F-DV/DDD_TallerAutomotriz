@@ -1,4 +1,4 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio;
 
-public class OrdenServicio AggregateEvent<{
+public class Factura {
 }
