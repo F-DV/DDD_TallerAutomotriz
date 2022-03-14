@@ -25,7 +25,7 @@ public class Vehiculo extends Entity<VehiculoId> {
 
     //Metodo getter
 
-    public Matricula matricula() {
+    public Matricula getMatricula() {
         return matricula;
     }
 }

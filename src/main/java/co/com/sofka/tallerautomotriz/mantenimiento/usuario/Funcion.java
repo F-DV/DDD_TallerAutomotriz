@@ -28,11 +28,11 @@ public class Funcion extends Entity<FuncionId> {
     }
 
     //Metodos getters
-    public Entrada entrada() {
+    public Entrada getEntrada() {
         return entrada;
     }
 
-    public Descripcion descripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 }
