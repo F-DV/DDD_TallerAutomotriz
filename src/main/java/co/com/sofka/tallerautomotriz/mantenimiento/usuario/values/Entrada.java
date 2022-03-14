@@ -9,7 +9,7 @@ public class Entrada implements ValueObject<Entrada.Tipo> {
     private final Tipo value;
 
     public Entrada(Tipo value) {
-        this.value = value;
+        this.value = Objects.requireNonNull(value);
     }
 
     @Override
