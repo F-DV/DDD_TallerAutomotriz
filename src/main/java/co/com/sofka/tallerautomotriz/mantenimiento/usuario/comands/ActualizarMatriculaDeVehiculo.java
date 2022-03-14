@@ -1,4 +1,4 @@
-package co.com.sofka.tallerautomotriz.mantenimiento.usuario.commads;
+package co.com.sofka.tallerautomotriz.mantenimiento.usuario.comands;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.Matricula;

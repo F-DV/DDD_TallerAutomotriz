@@ -1,19 +1,20 @@
-package co.com.sofka.tallerautomotriz.mantenimiento.usuario.commads;
+package co.com.sofka.tallerautomotriz.mantenimiento.usuario.comands;
 
 import co.com.sofka.domain.generic.Command;
-import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.Entrada;
+import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.Descripcion;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.FuncionId;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.UsuarioId;
 
-public class AgregarEntradaDeFuncion extends Command {
+public class ActualizarDescripcionDeFuncion extends Command {
+
     private final UsuarioId usuarioId;
     private final FuncionId funcionId;
-    private final Entrada entrada;
+    private final Descripcion descripcion;
 
-    public AgregarEntradaDeFuncion(UsuarioId usuarioId, FuncionId funcionId, Entrada entrada) {
+    public ActualizarDescripcionDeFuncion(UsuarioId usuarioId, FuncionId funcionId, Descripcion descripcion) {
         this.usuarioId = usuarioId;
         this.funcionId = funcionId;
-        this.entrada = entrada;
+        this.descripcion = descripcion;
     }
 
     public UsuarioId getUsuarioId() {
@@ -24,7 +25,7 @@ public class AgregarEntradaDeFuncion extends Command {
         return funcionId;
     }
 
-    public Entrada getEntrada() {
-        return entrada;
+    public Descripcion getDescripcion() {
+        return descripcion;
     }
 }

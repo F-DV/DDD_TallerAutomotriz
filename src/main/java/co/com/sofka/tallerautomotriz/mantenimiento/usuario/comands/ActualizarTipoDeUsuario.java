@@ -1,16 +1,15 @@
-package co.com.sofka.tallerautomotriz.mantenimiento.usuario.commads;
+package co.com.sofka.tallerautomotriz.mantenimiento.usuario.comands;
 
 import co.com.sofka.domain.generic.Command;
-
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.TipoUsuario;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.UsuarioId;
 
-public class AgregarTipoDeUsuario extends Command {
+public class ActualizarTipoDeUsuario extends Command {
 
     private final UsuarioId usuarioId;
     private final TipoUsuario tipoUsuario;
 
-    public AgregarTipoDeUsuario(UsuarioId usuarioId, TipoUsuario tipoUsuario) {
+    public ActualizarTipoDeUsuario(UsuarioId usuarioId, TipoUsuario tipoUsuario) {
         this.usuarioId = usuarioId;
         this.tipoUsuario = tipoUsuario;
     }
