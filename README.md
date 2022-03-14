@@ -9,3 +9,9 @@ trabajo final sofka sobre DDD , se modela un dominio de Taller Automotriz y se t
 2) MODELACION:
 
 ![DDD-Taller-Modelo](https://user-images.githubusercontent.com/52146620/158077038-0538b0b5-5bff-4d6a-8d05-81757ce5dc65.jpg)
+
+3)Eventos de Dominio
+
+![DDD-Taller-Eventos de Dominio](https://user-images.githubusercontent.com/52146620/158083658-91241bcc-e601-453b-ba4a-a8d19e52ebeb.jpg)
+
+4) Programacion
