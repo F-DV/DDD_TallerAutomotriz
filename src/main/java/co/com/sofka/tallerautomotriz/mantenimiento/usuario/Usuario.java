@@ -1,8 +1,11 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.usuario;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.events.*;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.*;
+
+import java.util.List;
 
 public class Usuario extends AggregateEvent<UsuarioId> {
 
@@ -18,6 +21,25 @@ public class Usuario extends AggregateEvent<UsuarioId> {
     public Usuario(UsuarioId entityId ,Nombre nombre, TipoUsuario tipoUsuario,Vehiculo vehiculo,Funcion funcion) {
         super(entityId);
         appendChange(new UsuarioCreado(nombre,tipoUsuario,vehiculo,funcion)).apply();
+    }
+
+    /*
+        Para afectar los estados de esta clase propia, necesitamos un CONSTRUCTOR PRIVADO (cuando voy a crear el objeto del agregado)
+        subcribe es un suscriptor que cada vez que se ejecuta un comportamiento lanza un evento, este evento va a tener un sibscriptor que va a estar pendiente
+        del evento para poder cambiar los estados de ESTE agregado
+    */
+    private Usuario(UsuarioId usuarioId){
+        super(usuarioId);
+        subscribe(new UsuarioChange(this));
+    }
+    /*
+        Creamos un cosntructor static que nos ayuda a construir el agregado sin que yo tenga que pasarle
+        todos los argumentos
+     */
+    public static Usuario from(UsuarioId usuarioId, List<DomainEvent> events){
+        var usuario =  new Usuario(usuarioId);                                      //constructor privado
+        events.forEach(usuario::applyEvent);                                        //Aplico los eventos a cada persona
+        return usuario;
     }
 
     /*
