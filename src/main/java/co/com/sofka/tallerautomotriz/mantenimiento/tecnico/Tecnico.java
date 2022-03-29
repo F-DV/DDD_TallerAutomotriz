@@ -3,6 +3,8 @@ package co.com.sofka.tallerautomotriz.mantenimiento.tecnico;
 import javax.smartcardio.Card;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.CargoDeEspecialidadActualizado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.EspecialidadAgregada;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.NombreAñadido;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Cargo;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.EspecialidadId;
