@@ -10,8 +10,8 @@ import java.util.List;
 
 public class OrdenServicio extends AggregateEvent<OrdenServicioId> {
 
-    protected TecnicoId tecnicoId;
-    protected UsuarioId usuarioId;
+    //protected TecnicoId tecnicoId;
+    //protected UsuarioId usuarioId;
     protected Factura factura;
     protected Mantenimiento mantenimiento;
     protected Repuesto repuesto;
@@ -19,11 +19,6 @@ public class OrdenServicio extends AggregateEvent<OrdenServicioId> {
 
     public OrdenServicio(OrdenServicioId entityId) {
         super(entityId);
-    }
-
-    private OrdenServicio(OrdenServicioId entityId){
-        super(entityId);
-        subscribe(new OrdenChange(this));
     }
 
     public static OrdenServicio from(OrdenServicioId ordenId, List<DomainEvent> events){
@@ -35,7 +30,6 @@ public class OrdenServicio extends AggregateEvent<OrdenServicioId> {
     public void agregarDescripcionRespuesto(Descripcion descripcion){
         appendChange(new DescripcionAgregada(descripcion)).apply();
     }
-
 
 
 
