@@ -1,5 +1,7 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.tecnico;
 
+import java.util.Objects;
+
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Cargo;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.EspecialidadId;
@@ -18,16 +20,20 @@ public class Especialidad extends Entity<EspecialidadId> {
     }
 
     // Comportamientos de la entidad
-    public void agregarTarifa() {
+    public void agregarTarifa(Tarifa tarifa) {
+        this.tarifa = Objects.requireNonNull(tarifa);
     }
 
-    public void actualizarTarifa() {
+    public void actualizarTarifa(Tarifa tarifa) {
+        this.tarifa = Objects.requireNonNull(tarifa);
     }
 
-    public void agregarCargo() {
+    public void agregarCargo(Cargo cargo) {
+        this.cargo = Objects.requireNonNull(cargo);
     }
 
-    public void actualizarCargo() {
+    public void actualizarCargo(Cargo cargo) {
+        this.cargo = Objects.requireNonNull(cargo);
     }
 
     // metodos getter

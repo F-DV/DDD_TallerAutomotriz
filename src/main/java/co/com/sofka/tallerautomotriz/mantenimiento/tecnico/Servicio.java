@@ -1,5 +1,7 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.tecnico;
 
+import java.util.Objects;
+
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Estado;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.ServicioId;
@@ -15,12 +17,12 @@ public class Servicio extends Entity<ServicioId> {
         this.estado = estado;
     }
 
-    public void agregarEstado() {
-
+    public void agregarEstado(Estado estado) {
+        this.estado = Objects.requireNonNull(estado);
     }
 
-    public void actualizarEstado() {
-
+    public void actualizarEstado(Estado estado) {
+        this.estado = Objects.requireNonNull(estado);
     }
 
     // get
