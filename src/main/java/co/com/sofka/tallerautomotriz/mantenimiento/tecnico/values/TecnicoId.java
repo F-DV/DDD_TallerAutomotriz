@@ -12,4 +12,8 @@ public class TecnicoId extends Identity {
         super(id);
     }
 
+    public static TecnicoId of(String id) {
+        return new TecnicoId(id);
+    }
+
 }

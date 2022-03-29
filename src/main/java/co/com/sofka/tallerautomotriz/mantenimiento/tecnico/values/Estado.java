@@ -1,5 +1,7 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values;
 
+import java.util.Objects;
+
 import co.com.sofka.domain.generic.ValueObject;
 
 public class Estado implements ValueObject<Estado.Tipo> {
