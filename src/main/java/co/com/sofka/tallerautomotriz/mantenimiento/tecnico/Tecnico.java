@@ -1,17 +1,6 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.tecnico;
 
-import javax.smartcardio.Card;
-
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.CargoDeEspecialidadActualizado;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.CargoDeEspecialidadAgregado;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.EspecialidadActualizada;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.EspecialidadAgregada;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.EstadoDeServicioActualizado;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.EstadoDeServicioAgregado;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.NombreAñadido;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.TarifaActualizada;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.comands.TarifaDeEspecialidadAñadido;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Cargo;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.EspecialidadId;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Estado;
@@ -28,6 +17,7 @@ public class Tecnico extends AggregateEvent<TecnicoId> {
 
     public Tecnico(TecnicoId entityId, Nombre nombre, EspecialidadId especialidadId, ServicioId servicioId) {
         super(entityId);
+
     }
 
     // comportamientos del agregado
