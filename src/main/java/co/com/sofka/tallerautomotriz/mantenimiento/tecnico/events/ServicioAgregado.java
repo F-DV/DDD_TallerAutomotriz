@@ -22,5 +22,7 @@ public class ServicioAgregado extends DomainEvent{
     public Estado getEstado() {
         return estado;
     }
+
+ 
     
 }

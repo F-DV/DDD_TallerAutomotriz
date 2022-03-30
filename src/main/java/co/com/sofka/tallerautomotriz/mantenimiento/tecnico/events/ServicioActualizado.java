@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Estado;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.ServicioId;
 
-public class ServicioActualizado extends DomainEvent {
+public class ServicioActualizado extends DomainEvent{
         
     private final ServicioId servicioId;
     private final Estado estado;

@@ -22,5 +22,14 @@ public class EspecialidadActualizada extends DomainEvent{
     public EspecialidadId getEspecialidadId() {
         return especialidadId;
     }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public Tarifa getTarifa() {
+        return tarifa;
+    }
+    
     
 }

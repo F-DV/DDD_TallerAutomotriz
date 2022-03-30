@@ -11,6 +11,8 @@ import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EspecialidadAg
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EstadoDeServicioActualizado;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EstadoDeServicioAgregado;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.NombreAñadido;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.ServicioActualizado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.ServicioAgregado;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.TarifaActualizada;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.TarifaDeEspecialidadAñadido;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.TecnicoCreado;
@@ -89,7 +91,7 @@ public class Tecnico extends AggregateEvent<TecnicoId> {
     }
 
     public void agregarServicio(ServicioId servicioid, Estado estado){
-        appendChange(new ServicioAgregado(servicioid,estado )).apply();
+        appendChange(new ServicioAgregado(servicioid,estado)).apply();
     }
     public void actualizarServicio(ServicioId servicioid, Estado estado){
         appendChange(new ServicioActualizado(servicioid,estado)).apply();

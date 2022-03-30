@@ -1,8 +1,12 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.tecnico;
 
 import co.com.sofka.domain.generic.EventChange;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EspecialidadActualizada;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EspecialidadAgregada;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.ServicioActualizado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.ServicioAgregado;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.TecnicoCreado;
+
 
 
 
@@ -28,11 +32,23 @@ public class TecnicoChange extends EventChange{
                 event.getTarifa());
  
         });
-
-        
-
-
-
+        apply((EspecialidadActualizada event) -> {
+            tecnico.especialidad = new Especialidad(
+                event.getEspecialidadId(), 
+                event.getCargo(), 
+                event.getTarifa());
+ 
+        });
+        apply((ServicioAgregado event) -> {
+            tecnico.servicio = new Servicio(
+                event.getServicioId(), 
+                event.getEstado());
+            });
+        apply((ServicioActualizado event) -> {
+            tecnico.servicio = new Servicio(
+                event.getServicioId(), 
+                event.getEstado());
+            });   
 
     }
     

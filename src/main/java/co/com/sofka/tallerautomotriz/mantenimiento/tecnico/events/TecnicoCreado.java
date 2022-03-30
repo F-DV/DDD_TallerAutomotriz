@@ -3,9 +3,8 @@ package co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.Especialidad;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.Servicio;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.EspecialidadId;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Nombre;
-import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.ServicioId;
+
 
 public class TecnicoCreado extends DomainEvent{
 
