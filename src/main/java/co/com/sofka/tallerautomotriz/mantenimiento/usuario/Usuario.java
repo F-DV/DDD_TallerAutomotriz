@@ -60,8 +60,8 @@ public class Usuario extends AggregateEvent<UsuarioId> {
         appendChange(new DescripcionDeFuncionActualizada(funcionId, descripcion)).apply();
     }
 
-    public void agregarVehiculo(Vehiculo vehiculo) {
-        appendChange(new VehiculoAgregado(vehiculo)).apply();
+    public void agregarVehiculo(VehiculoId vehiculoId,Matricula matricula) {
+        appendChange(new VehiculoAgregado(vehiculoId, matricula)).apply();
     }
 
     public void cambiarNombre(Nombre nombre) {
@@ -76,8 +76,8 @@ public class Usuario extends AggregateEvent<UsuarioId> {
         appendChange(new MatriculaDeVehiculoActualizada(vehiculoId, matricula)).apply();
     }
 
-    public void actualizarVehiculo(Vehiculo vehiculo) {
-        appendChange(new VehiculoActualizado(vehiculo)).apply();
+    public void actualizarVehiculo(VehiculoId vehiculoId, Matricula matricula) {
+        appendChange(new VehiculoActualizado(vehiculoId, matricula)).apply();
     }
 
     public void agregarTipoDeUsuario(TipoUsuario tipoUsuario) {

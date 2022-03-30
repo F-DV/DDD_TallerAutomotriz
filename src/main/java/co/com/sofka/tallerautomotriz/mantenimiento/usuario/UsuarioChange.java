@@ -5,6 +5,7 @@ import co.com.sofka.tallerautomotriz.mantenimiento.usuario.events.FuncionAgregad
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.events.UsuarioCreado;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.events.VehiculoAgregado;
 import co.com.sofka.tallerautomotriz.mantenimiento.usuario.values.TipoUsuario;
+import co.com.sofka.tallerautomotriz.mantenimiento.usuario.events.VehiculoActualizado;
 
 import java.util.HashSet;
 
@@ -20,14 +21,26 @@ public class UsuarioChange extends EventChange {
             usuario.vehiculo = event.getVehiculo();
             usuario.funcion = event.getFuncion();
         });
+
         apply((VehiculoAgregado event) -> {
-            usuario.vehiculo = event.getVehiculo();
+            usuario.vehiculo = new Vehiculo( 
+                event.getVehiculoId(),
+                event.getMatricula());
         });
+
+        apply((VehiculoActualizado event) -> {
+            usuario.vehiculo = new Vehiculo( 
+                event.getVehiculoId(),
+                event.getMatricula());
+        });
+        
+
         apply((FuncionAgregada event) -> {
+            usuario.funcion = new Funcion(event.getFuncionId(),
+             event.getEntrada(),
+              event.getDescripcion());
 
         });
-
-
 
 
     }
