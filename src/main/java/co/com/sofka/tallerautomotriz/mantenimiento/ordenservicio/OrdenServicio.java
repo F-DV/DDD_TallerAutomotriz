@@ -77,8 +77,6 @@ public class OrdenServicio extends AggregateEvent<OrdenServicioId> {
         appendChange(new ValorDeFacturaCreado(facturaId,valor)).apply();
     }
 
-
-
     //Getters
     public Factura getFactura() {
         return factura;
