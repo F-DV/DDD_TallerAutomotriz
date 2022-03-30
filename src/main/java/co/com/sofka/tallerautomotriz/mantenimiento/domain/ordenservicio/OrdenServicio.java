@@ -7,6 +7,7 @@ import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.D
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.FacturaCreada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.FechaDeFacturaCreada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.MantenimientoCreado;
+import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.OrdenCreada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.RepuestoAgregado;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.TipoDeMantenimientoCreado;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.ValorDeFacturaCreado;

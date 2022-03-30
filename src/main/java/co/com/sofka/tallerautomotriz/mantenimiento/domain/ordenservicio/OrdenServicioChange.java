@@ -3,6 +3,7 @@ package co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio;
 import co.com.sofka.domain.generic.EventChange;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.FacturaCreada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.MantenimientoCreado;
+import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.OrdenCreada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.RepuestoAgregado;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.events.ValorDeFacturaCreado;
 

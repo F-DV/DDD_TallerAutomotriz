@@ -1,7 +1,9 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.domain.tecnico;
 
+import java.util.List;
 import java.util.Objects;
 
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.tecnico.values.Cargo;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.tecnico.values.EspecialidadId;
@@ -43,6 +45,10 @@ public class Especialidad extends Entity<EspecialidadId> {
 
     public Tarifa getTarifa() {
         return tarifa;
+    }
+
+    public List<DomainEvent> getUncommittedChanges() {
+        return null;
     }
 
 }

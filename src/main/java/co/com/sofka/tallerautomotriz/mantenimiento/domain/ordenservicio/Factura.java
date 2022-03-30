@@ -1,5 +1,8 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio;
 
+import java.util.List;
+
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.value.FacturaId;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.value.Fecha;
@@ -33,5 +36,9 @@ public class Factura extends Entity<FacturaId> {
 
     public Fecha fecha(){
         return fecha;
+    }
+
+    public List<DomainEvent> getUncommittedChanges() {
+        return null;
     }
 }
