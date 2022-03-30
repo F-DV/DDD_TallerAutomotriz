@@ -6,6 +6,7 @@ import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Fecha;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Valor;
 
 public class Factura extends Entity<FacturaId> {
+    
     private Valor valor;
     private Fecha fecha;
 

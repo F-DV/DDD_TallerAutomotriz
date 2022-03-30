@@ -11,8 +11,7 @@ public class RepuestoId extends Identity {
         super(id);
     }
 
-    public static RepuestoId of(String id){ // con base a un string va a construir un identificador unico
-
+    public static RepuestoId of(String id){ 
         return new RepuestoId(id);
     }
 }

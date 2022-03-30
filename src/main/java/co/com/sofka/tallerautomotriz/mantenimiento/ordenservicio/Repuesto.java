@@ -10,7 +10,7 @@ public class Repuesto extends Entity<RepuestoId> {
 
     private Descripcion descripcion;
 
-    public Respuesto(RespuestoId entityId, Descripcion descripcion){
+    public Repuesto(RepuestoId entityId, Descripcion descripcion){
         super(entityId);
         this.descripcion = descripcion;
     }
@@ -24,5 +24,13 @@ public class Repuesto extends Entity<RepuestoId> {
     public void agregarDescripcion(Descripcion descripcion){
         this.descripcion = Objects.requireNonNull(descripcion);
     }
+
+    //getter
+    public Descripcion getDescripcion() {
+        return descripcion;
+    }
+
+    
+    
 
 }
