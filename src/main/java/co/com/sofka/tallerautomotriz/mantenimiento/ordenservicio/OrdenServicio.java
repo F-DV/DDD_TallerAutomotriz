@@ -6,6 +6,7 @@ import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.Descripc
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Descripcion;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.FacturaId;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Fecha;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.MantenimientoId;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.OrdenServicioId;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.RepuestoId;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Tipo;
