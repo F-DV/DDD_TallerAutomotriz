@@ -53,6 +53,7 @@ public class Tecnico extends AggregateEvent<TecnicoId> {
         return tecnico;
     }
 
+    
     // comportamientos del agregado
     public void añadirNombre(TecnicoId entityId, Nombre nombre) {
         appendChange(new NombreAñadido(entityId, nombre)).apply();
