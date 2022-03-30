@@ -3,6 +3,13 @@ package co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.DescripcionAgregada;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.DescripcionDeRepuestoCreada;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.FacturaCreada;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.FechaDeFacturaCreada;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.MantenimientoCreado;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.RepuestoAgregado;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.TipoDeMantenimientoCreado;
+import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.events.ValorDeFacturaCreado;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Descripcion;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.FacturaId;
 import co.com.sofka.tallerautomotriz.mantenimiento.ordenservicio.value.Fecha;
@@ -67,7 +74,7 @@ public class OrdenServicio extends AggregateEvent<OrdenServicioId> {
     }
 
     public void crearValorDeFactura(FacturaId facturaId, Valor valor){
-        appendChange(new ValorDeFacturaCreadoi(facturaId,valor)).apply();
+        appendChange(new ValorDeFacturaCreado(facturaId,valor)).apply();
     }
 
 
