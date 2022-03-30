@@ -11,8 +11,8 @@ public class MantenimientoId extends Identity{
         super(id);
     }
     
-     // meodo para pedir el identificador sin necesidad de new
-     public static MantenimientoId of(String id) {
+     // Patron Builder
+     public static MantenimientoId of(String id) {                  
         return new MantenimientoId(id);
     }
 }

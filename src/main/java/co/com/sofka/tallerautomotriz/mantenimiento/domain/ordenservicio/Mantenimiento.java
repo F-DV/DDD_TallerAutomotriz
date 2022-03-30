@@ -1,7 +1,9 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio;
 
+import java.util.List;
 import java.util.Objects;
 
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.value.MantenimientoId;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.ordenservicio.value.Tipo;
@@ -25,6 +27,10 @@ public class Mantenimiento extends Entity<MantenimientoId>{
     
     public Tipo getTipo() {
         return tipo;
+    }
+
+    public List<DomainEvent> getUncommittedChanges() {
+        return null;
     }
 
    
