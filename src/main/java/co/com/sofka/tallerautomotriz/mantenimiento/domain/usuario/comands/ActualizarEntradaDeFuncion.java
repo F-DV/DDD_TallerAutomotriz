@@ -1,6 +1,7 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.comands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.Descripcion;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.Entrada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.FuncionId;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.UsuarioId;
@@ -27,5 +28,9 @@ public class ActualizarEntradaDeFuncion extends Command {
 
     public Entrada getEntrada() {
         return entrada;
+    }
+
+    public Descripcion getDescripcion() {
+        return null;
     }
 }

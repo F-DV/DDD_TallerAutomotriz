@@ -1,10 +1,12 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario;
 
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.Descripcion;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.Entrada;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.FuncionId;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Funcion extends Entity<FuncionId> {
@@ -34,5 +36,9 @@ public class Funcion extends Entity<FuncionId> {
 
     public Descripcion getDescripcion() {
         return descripcion;
+    }
+
+    public List<DomainEvent> getUncommittedChanges() {
+        return null;
     }
 }

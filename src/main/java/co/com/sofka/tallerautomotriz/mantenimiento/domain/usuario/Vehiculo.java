@@ -1,9 +1,11 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario;
 
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.Matricula;
 import co.com.sofka.tallerautomotriz.mantenimiento.domain.usuario.values.VehiculoId;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Vehiculo extends Entity<VehiculoId> {
@@ -27,5 +29,9 @@ public class Vehiculo extends Entity<VehiculoId> {
 
     public Matricula getMatricula() {
         return matricula;
+    }
+
+    public List<DomainEvent> getUncommittedChanges() {
+        return null;
     }
 }
