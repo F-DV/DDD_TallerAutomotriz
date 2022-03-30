@@ -1,6 +1,15 @@
 package co.com.sofka.tallerautomotriz.mantenimiento.tecnico;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.CargoDeEspecialidadActualizado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.CargoDeEspecialidadAgregado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EspecialidadActualizada;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EspecialidadAgregada;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EstadoDeServicioActualizado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.EstadoDeServicioAgregado;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.NombreAñadido;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.TarifaActualizada;
+import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.events.TarifaDeEspecialidadAñadido;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Cargo;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.EspecialidadId;
 import co.com.sofka.tallerautomotriz.mantenimiento.tecnico.values.Estado;
