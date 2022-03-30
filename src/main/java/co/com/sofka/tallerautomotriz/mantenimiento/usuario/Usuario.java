@@ -19,6 +19,7 @@ public class Usuario extends AggregateEvent<UsuarioId> {
      */
     public Usuario(UsuarioId entityId, Nombre nombre, TipoUsuario tipoUsuario, Vehiculo vehiculo, Funcion funcion) {
         super(entityId);
+        subscribe(new UsuarioChange(this));
         appendChange(new UsuarioCreado(nombre, tipoUsuario, vehiculo, funcion)).apply();
     }
 

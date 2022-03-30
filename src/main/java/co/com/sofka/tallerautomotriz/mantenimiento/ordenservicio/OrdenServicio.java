@@ -17,19 +17,37 @@ public class OrdenServicio extends AggregateEvent<OrdenServicioId> {
     protected Repuesto repuesto;
 
 
-    public OrdenServicio(OrdenServicioId entityId) {
+    public OrdenServicio(OrdenServicioId entityId, Factura factura, Repuesto repuesto) {
         super(entityId);
-    }
+        appendChange(new OrdenCreada(entityId, factura, repuesto)).apply();
 
+    }
+/*
     public static OrdenServicio from(OrdenServicioId ordenId, List<DomainEvent> events){
         var ordenServicio = new OrdenServicio(OrdenServicioId);
         events.forEach(ordenServicio::applyEvent);
         return ordenServicio;
     }
-
+*/
     public void agregarDescripcionRespuesto(Descripcion descripcion){
         appendChange(new DescripcionAgregada(descripcion)).apply();
     }
+
+
+
+    //Getters
+    public Factura getFactura() {
+        return factura;
+    }
+
+    public Mantenimiento Mantenimiento() {
+        return mantenimiento;
+    }
+
+    public Repuesto Repuesto() {
+        return repuesto;
+    }
+ 
 
 
 
